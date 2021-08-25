@@ -402,11 +402,26 @@
                 </ul>
 
             </div>
+            <div class="footer-sub"> 
+                <form action="">
+                    <p class="footer-paragraf">Подпишитесь на рассылку </p>
+                    <label class="footer-label">
+                    <input type="text" name="meil" type="email" placeholder="E-mail" class="footer-input">
+                    <button type="submit" class="btn footer-btn">
+                        Подписаться
+                        <svg width="24" height="24">
+                            <use href="./images/icons.svg#icon-send"></use>
+                        </svg>
+                    </button>
+                    
+                    </label>
+                </form>
+            </div>
         </div>
 
     </footer>
 
-
+<!-- Модальне вікно -->
     <div data-modal class="backdrop is-hidden">
         <div class="modal">
             <svg data-modal-close width="30" height="30" class="close">
@@ -438,16 +453,29 @@
                             <use href="./images/icons.svg#icon-email"></use>
                         </svg>
                         <input type="email" name="mail" class="form-input">
+                       
                     </label>
                 </div>
 
-                <div class="form-field">
-                    <label class="form-label"> Комментарий
-                        <input type="text" name="mail" class="form-input" placeholder="Введите текст">
+                <div class="form-field coments">
+                    <label class="form-label "> Комментарий
+                        <input type="text" name="mail" class="coments form-input " placeholder="Введите текст">
                     </label>
                 </div>
 
-                <button type="submit" class="btn">Отправить</button>
+               <div class="tearms-of-use">           
+                <label>
+                    <input type="checkbox" name="use" value="html" class="checkbox"  />
+                    <svg width="15" height="15" class="icon-checkbox">
+                        <use href="./images/icons.svg#icon-Vector"></use>
+                    </svg>
+                    <span class="form-text"> Соглашаюсь с рассылкой и принимаю <a href="#" class="form-link">Условия договора</a> 
+</span>
+                </label>
+                </div>
+                <div class="btn-modal">
+                <button type="submit" class="btn form-btn">Отправить</button>
+                </div>
             </form>
         </div>
     </div>
