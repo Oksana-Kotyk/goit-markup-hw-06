@@ -507,6 +507,7 @@ img {
   padding: 0;
   margin-bottom: 20px;
 }
+
 .f-list-icon {
   background: rgba(255, 255, 255, 0.1);
   fill: var(--primary-white-color);
@@ -523,11 +524,21 @@ img {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   padding-left: 16px;
+  margin-right: 12px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-label {
+  display: flex;
 }
 .footer-btn {
   height: 50px;
   width: 200px;
   padding: 10px 29px;
+  display: inline-block;
 }
 .footer-sub input::placeholder {
   font-family: Roboto;
@@ -681,17 +692,27 @@ img {
   min-height: 581px;
   top: 50%;
   left: 50%;
+  padding: 40px;
   transform: translate(-50%, -50%);
   background-color: #fff;
 }
 .close {
   display: block;
-  cursor: pointer;
   margin-right: 8px;
   margin-left: auto;
+  cursor: pointer;
   margin-top: 8px;
-  border-radius: 30px;
+  background-color: var(--primary-white-color);
+  padding: 0;
+  height: 32px;
+  width: 32px;
+  border-radius: 100px;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close:hover,
+.close:focus {
+  fill: var(--accent-color);
 }
 .form-paragraf {
   font-family: Roboto;
@@ -704,16 +725,6 @@ img {
   color: #212121;
   margin-bottom: 10px;
 }
-.form-field {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 448px;
-  height: 40px;
-  margin-bottom: 30px;
-  padding-right: 40px;
-  padding-left: 40px;
-}
 .form-label {
   position: relative;
   font-family: Roboto;
@@ -723,11 +734,26 @@ img {
   line-height: 14px;
   letter-spacing: 0.01em;
   color: var(--primary-text-color);
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 448px;
+  padding-bottom: 10px;
+}
+.form-input {
+  padding-left: 40px;
 }
 .form-input {
   width: 448px;
   height: 40px;
+  margin-top: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.coments {
+  margin-top: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -735,22 +761,20 @@ img {
 }
 .form-icon {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 12px;
   fill: var(--title-text-color);
 }
-.form-label:focus-within > .form-icon {
-  outline: none;
-  fill: var(--accent-color);
-}
-.form-input:focus,
-.form-input:hover {
+
+.form-input:hover,
+.form-input:focus {
   border: 1px solid var(--accent-color);
 }
-.form-field input {
-  padding-left: 40px;
+.form-input:hover + .form-icon,
+.form-input:focus + .form-icon {
+  fill: var(--accent-color);
 }
-.form-field input::placeholder {
+.form-label input::placeholder {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -786,6 +810,11 @@ img {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+  cursor: pointer;
+}
+.icon-checkbox:focus,
+.icon-checkbox:hover {
+  border: 2px solid var(--accent-color);
 }
 
 .form-link {
