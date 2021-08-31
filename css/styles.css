@@ -736,7 +736,6 @@ img {
   color: var(--primary-text-color);
   display: flex;
   flex-direction: column;
-  position: relative;
   width: 448px;
   padding-bottom: 10px;
 }
@@ -752,10 +751,13 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .coments {
   margin-top: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  padding: 10px 10px;
+  height: 120px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -775,6 +777,7 @@ img {
   fill: var(--accent-color);
 }
 .form-label input::placeholder {
+  transform: translateY((-100%) translateY(-10%));
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -793,9 +796,6 @@ img {
   color: var(--primary-text-color);
 }
 
-.coments {
-  height: 120px;
-}
 .tearms-of-use {
   display: block;
   text-align: center;
